@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin</title>
+  <%= stylesheet_link_tag 'admin', media: 'all', 'data-turbolinks-track' => true %>
+  <%= requirejs_include_tag { |controller| { 'main' => 'app/app' } } %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<main role="main">
+  <%= yield %>
+</main>
+
+</body>
+</html>
