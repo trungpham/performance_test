@@ -1,0 +1,3 @@
+<% content_for :javascript do %>
+  <%= requirejs_include_tag { |controller| { 'main' => 'app/app' } } %>
+<% end %>

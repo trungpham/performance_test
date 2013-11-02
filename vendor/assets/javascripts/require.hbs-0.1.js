@@ -1,6 +1,6 @@
 define(["handlebars"], function(Handlebars) {
   var buildMap = {},
-      templateExtension = ".hbs";
+      templateExtension = ".html";
 
   return {
 
