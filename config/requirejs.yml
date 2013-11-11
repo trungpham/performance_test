@@ -1,8 +1,5 @@
 modules:
-  - name: 'common'
   - name: 'app/main'
-    deps:    ['common']
-    exclude: ['common']
 
 priority: ['app/app']
 
