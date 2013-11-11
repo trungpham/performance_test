@@ -1,3 +1,18 @@
+<% content_for :javascript do %>
+  <%= javascript_include_tag 'jquery-1.10.2.min.js' %>
+  <%= javascript_tag do %>
+    $(function() {
+      
+      $('a').on('click', function() {
+        var startTime = (new Date()).getTime();
+        $(this).attr('href', $(this).attr('href') + '?' + startTime);
+        return true;
+      });
+      
+    });
+  <% end %>
+<% end %>
+
 <h1>Performance Test</h1>
 
 <p><a href="/server">Server test</a></p>
