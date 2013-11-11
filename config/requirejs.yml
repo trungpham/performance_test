@@ -28,3 +28,5 @@ shim:
     deps: ['jquery', 'underscore']
   backbone.wreqr:
     deps: ['backbone']
+  backbone.babysitter:
+    deps: ['backbone']
