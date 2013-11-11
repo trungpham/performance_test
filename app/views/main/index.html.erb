@@ -4,8 +4,10 @@
     $(function() {
       
       $('a').on('click', function() {
-        var startTime = (new Date()).getTime();
-        $(this).attr('href', $(this).attr('href') + '?' + startTime);
+        var startTime = (new Date()).getTime(),
+            baseUrl = /([^?]*)/.exec($(this).attr('href'))[0];
+        
+        $(this).attr('href', baseUrl + '?' + startTime);
         return true;
       });
       

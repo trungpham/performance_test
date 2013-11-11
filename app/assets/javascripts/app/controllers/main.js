@@ -13,8 +13,13 @@ define([
 
   $.extend(MainController.prototype, {
     client: function() {
-      var view = new ClientView();
+      var view = new ClientView(),
+          startTime = document.location.search.replace('?', ''),
+          endTime = (new Date()).getTime();
+
       app.layout.main.show(view);
+      
+      $('body').prepend('<strong style="color: red;">LOAD TIME: ' + (endTime - startTime) + 'ms</strong>');
     },
     
     placeholder1: function() {

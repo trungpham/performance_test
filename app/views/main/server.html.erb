@@ -1,6 +1,18 @@
 <main role="main">
   <% content_for :javascript do %>
     <%= requirejs_include_tag { |controller| { 'main' => 'server' } } %>
+    <%= javascript_tag do %>
+      document.addEventListener('DOMContentLoaded', function () {
+        var startTime = document.location.search.replace('?', ''),
+            endTime = (new Date()).getTime(),
+            timeInfoElement;
+  
+        timeInfoElement = document.createElement('strong');
+        timeInfoElement.style.color = 'red';
+        timeInfoElement.innerHTML = 'LOAD TIME: ' + (endTime - startTime) + 'ms</strong>';
+        document.body.insertBefore(timeInfoElement, document.body.childNodes[0]);
+      }, false);
+    <% end %>
   <% end %>
   
   <h1>A heading</h1>
