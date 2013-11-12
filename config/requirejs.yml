@@ -1,5 +1,6 @@
 modules:
   - name: 'app/main'
+  - name: 'server'
 
 priority: ['app/app']
 
