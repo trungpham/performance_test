@@ -9,12 +9,12 @@ modules:
 priority: ['common', 'app/main']
 
 paths:
+  jquery:               'jquery-1.10.2.min'
   backbone:             'backbone-1.1.0.min'
   backbone.marionette:  'backbone.marionette-1.2.2.min'
   backbone.modelbinder: 'backbone.modelbinder-1.0.5.min'
   backbone.wreqr:       'backbone.wreqr-0.2.0.min'
   backbone.babysitter:  'backbone.babysitter-0.0.6.min'
-  jquery:               'jquery-1.10.2.min'
   underscore:           'underscore-1.5.2.min'
   handlebars:           'handlebars-1.0.0'
   text:                 'require.text-2.0.10'
