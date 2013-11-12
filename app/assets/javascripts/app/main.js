@@ -1,11 +1,5 @@
-define([
-  'app/app',
-  'backbone-all',
-  'app/routers/main',
-  'app/controllers/main'
-], function(app, Backbone, MainRouter, MainController) {
+require(['common'], function() {
   'use strict';
   
-  app.Router = new MainRouter({ controller: new MainController() });
-  app.start();
+  require(['app/main.main']);
 });
