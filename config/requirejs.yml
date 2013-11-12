@@ -1,12 +1,15 @@
 modules:
   - name: 'common'
+
+  - name: 'common-hbs'
+
   - name: 'app/main'
     include: ['app/main.main']
-    exclude: ['common']
-  - name: 'server'
-    exclude: ['common']
+    exclude: ['common', 'common-hbs']
 
-priority: ['common', 'app/main']
+  - name: 'server'
+
+priority: ['common', 'common-hbs', 'app/main']
 
 paths:
   jquery:               'jquery-1.10.2.min'
