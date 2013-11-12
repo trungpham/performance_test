@@ -1,3 +1,3 @@
-require(['jquery', 'backbone-all'], function($, Backbone) {
+require(['jquery', 'backbone-all', 'handlebars'], function($, Backbone, Handlebars) {
   'use strict';
 });
