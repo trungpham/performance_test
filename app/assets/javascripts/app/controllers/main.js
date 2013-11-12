@@ -19,7 +19,7 @@ define([
 
       app.layout.main.show(view);
       
-      $('body').prepend('<strong style="color: red;">LOAD TIME: ' + (endTime - startTime) + 'ms</strong>');
+      $('body').prepend('<strong style="color: red;">LOAD TIME FROM <u>CLIENT</u>: ' + (endTime - startTime) + 'ms</strong>');
     },
     
     placeholder1: function() {
