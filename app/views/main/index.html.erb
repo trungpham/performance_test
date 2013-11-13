@@ -12,10 +12,10 @@
         return true;
       });
 
-      $('#clientInlineModal').fancybox({
+      $('#clientModal').fancybox({
         width: 650,
-        height: 450,
-        autoScale: false,
+        height: 550,
+        autoSize: false,
         transitionIn: 'none',
         transitionOut: 'none',
         type: 'iframe',
@@ -30,5 +30,5 @@
 <ul>
   <li><a class="timed" href="/server">Server</a></li>
   <li><a class="timed" href="/client">Client: standalone page</a></li>
-  <li><a id="clientInlineModal" href="/client">Client: modal with iframe</a></li>
+  <li><a id="clientModal" href="/client">Client: modal with iframe</a></li>
 </ul>
