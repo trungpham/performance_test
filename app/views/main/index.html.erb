@@ -4,7 +4,7 @@
   <%= javascript_tag do %>
     $(function() {
       
-      $('.timed').on('click', function() {
+      $('.tests a').on('click', function() {
         var startTime = (new Date()).getTime(),
             baseUrl = /([^?]*)/.exec($(this).attr('href'))[0];
         
@@ -27,8 +27,8 @@
 <% end %>
 
 <h1>Performance Tests</h1>
-<ul>
-  <li><a class="timed" href="/server">Server</a></li>
-  <li><a class="timed" href="/client">Client: standalone page</a></li>
+<ul class="tests">
+  <li><a href="/server">Server</a></li>
+  <li><a href="/client">Client: standalone page</a></li>
   <li><a id="clientModal" href="/client">Client: modal with iframe</a></li>
 </ul>
