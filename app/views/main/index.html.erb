@@ -23,6 +23,9 @@
         beforeLoad: function() {
           $.fancybox.showLoading();
         },
+        afterLoad: function() {
+          $.fancybox.showLoading();
+        },
         afterShow: function() {
           $.fancybox.hideLoading();
         }
