@@ -1,22 +1,38 @@
+<% content_for :css do %>
+  <%= stylesheet_link_tag 'fancybox/jquery.fancybox', 'data-turbolinks-track' => true %>
+<% end %>
+
 <% content_for :javascript do %>
   <%= javascript_include_tag 'jquery-1.10.2.min' %>
+  <%= javascript_include_tag 'fancybox/jquery.fancybox.pack' %>
   <%= javascript_tag do %>
     $(function() {
       
-      $('a').on('click', function() {
+      $('.timed').on('click', function() {
         var startTime = (new Date()).getTime(),
             baseUrl = /([^?]*)/.exec($(this).attr('href'))[0];
         
         $(this).attr('href', baseUrl + '?' + startTime);
         return true;
       });
+
+      $('#clientInlineModal').fancybox({
+        width: 650,
+        height: 450,
+        autoScale: false,
+        transitionIn: 'none',
+        transitionOut: 'none',
+        type: 'iframe',
+        modal: true
+      });
       
     });
   <% end %>
 <% end %>
 
-<h1>Performance Test</h1>
-
-<p><a href="/server">Server test</a></p>
-
-<p><a href="/client">Client test</a></p>
+<h1>Performance Tests</h1>
+<ul>
+  <li><a class="timed" href="/server">Server</a></li>
+  <li><a class="timed" href="/client">Client: standalone page</a></li>
+  <li><a id="clientInlineModal" href="/client">Client: modal with iframe</a></li>
+</ul>
