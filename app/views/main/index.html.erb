@@ -27,7 +27,9 @@
           $.fancybox.showLoading();
         },
         afterShow: function() {
-          $.fancybox.hideLoading();
+          window.setTimeout(function() {
+            $.fancybox.hideLoading();
+          }, 500);
         }
       });
       
