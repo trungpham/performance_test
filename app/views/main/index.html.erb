@@ -19,7 +19,13 @@
         transitionIn: 'none',
         transitionOut: 'none',
         type: 'iframe',
-        modal: true
+        modal: true,
+        beforeLoad: function() {
+          $.fancybox.showLoading();
+        },
+        afterShow: function() {
+          $.fancybox.hideLoading();
+        }
       });
       
     });
