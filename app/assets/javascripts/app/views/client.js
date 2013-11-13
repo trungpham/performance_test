@@ -7,6 +7,12 @@ define([
   'use strict';
 
   return Backbone.Marionette.ItemView.extend({
-    template: clientTemplate
+    template: clientTemplate,
+
+    serializeData: function() {
+      return {
+        widgets: this.collection.toJSON()
+      }
+    }
   });
 });

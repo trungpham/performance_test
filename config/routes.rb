@@ -3,4 +3,6 @@ PerformanceTest::Application.routes.draw do
   
   get '/server' => 'main#server'
   get '/client' => 'main#client'
+
+  get '/api/widgets' => 'api#widgets'
 end

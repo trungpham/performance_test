@@ -37,3 +37,11 @@
 <p>Nunc fringilla, turpis vitae sodales euismod, erat dui consectetur ipsum, sit amet volutpat erat nibh vitae nisl. Fusce ac velit aliquet, dictum enim volutpat, dignissim tellus. Praesent et nisi sed ligula fermentum tristique at sit amet turpis. Quisque tristique erat ac ullamcorper elementum. Sed et pretium sem, ac dignissim sem. Proin consequat gravida dolor eget placerat. Donec laoreet sit amet augue in gravida. Vivamus tincidunt consectetur augue.</p>
 <p>Mauris blandit felis nec ornare imperdiet. Vivamus luctus vehicula neque, quis auctor elit semper sit amet. Nam tempor metus id arcu malesuada volutpat eget eu tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris mattis bibendum felis, ut gravida libero consectetur volutpat. Maecenas eget condimentum dui. Suspendisse potenti. Quisque gravida enim mollis massa tristique, quis gravida diam dapibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras dictum tortor quis sapien porta tempor id quis eros. Quisque a nibh semper, suscipit neque ut, malesuada mi. Quisque erat libero, placerat non luctus vel, laoreet sed ipsum. Fusce varius odio ut sem volutpat, ut euismod mauris sollicitudin. Donec non iaculis enim, eu porttitor sapien.</p>
 <p>Nullam hendrerit est purus, id tempus ipsum suscipit sit amet. Aliquam pulvinar mi eros, ac molestie mi lacinia convallis. Quisque quis blandit elit. In est nisi, semper quis sollicitudin sit amet, tincidunt eu nisl. Nam libero lacus, consectetur in cursus quis, ultrices in ante. Vivamus purus magna, lacinia ut metus vitae, tempus lacinia elit. Curabitur quis ligula dignissim, convallis libero eget, feugiat purus. Duis non sodales elit, quis mollis ligula. Proin at dui molestie, sagittis lacus at, tristique est. Sed tempus nisi nibh. Aliquam erat volutpat. Quisque et velit lectus.</p>
+
+<h1>Some dynamic data</h1>
+
+<ul>
+{{#each widgets}}
+  <li>{{this.name}}</li>
+{{/each}}
+</ul>
