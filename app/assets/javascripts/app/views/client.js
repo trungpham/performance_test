@@ -13,6 +13,15 @@ define([
       return {
         widgets: this.collection.toJSON()
       }
+    },
+
+    render: function() {
+      var startTime = document.location.search.replace('?', ''),
+         endTime = (new Date()).getTime();
+
+      Backbone.Marionette.ItemView.prototype.render.apply(this, arguments);
+
+      $('body').prepend('<strong style="color: red;">LOAD TIME FROM <u>CLIENT</u>: ' + (endTime - startTime) + 'ms</strong>');
     }
   });
 });

@@ -15,15 +15,12 @@ define([
   $.extend(MainController.prototype, {
     client: function() {
       var view,
-          collection = new WidgetCollection(),
-          startTime = document.location.search.replace('?', ''),
-          endTime = (new Date()).getTime();
+          collection = new WidgetCollection();
 
       collection.fetch({
         success: function() {
           view = new ClientView({ collection: collection });
           app.layout.main.show(view);
-          $('body').prepend('<strong style="color: red;">LOAD TIME FROM <u>CLIENT</u>: ' + (endTime - startTime) + 'ms</strong>');
         }
       });
     },
